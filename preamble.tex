@@ -1,0 +1,88 @@
+% Preamble: packages and configurations
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm} % Math symbols and environments
+\usepackage{graphicx}                  % For including images
+\usepackage{hyperref}                  % Hyperlinks
+\usepackage{geometry}                  % Page geometry
+\usepackage{fancyhdr}                  % Header and footer customization
+\usepackage{tikz}                      % For creating figures
+\usepackage{enumitem}                  % Customizing lists
+\usepackage{mathpazo}    % Palatino font for text and math  
+\usepackage{microtype}    % Improves text appearance
+\usepackage{mathtools}    % Extension of amsmath with fixes and enhancements
+\usepackage{cleveref}   % Automatically labels references (like Theorem, etc.)
+\usepackage{booktabs}  % Better table formatting
+\usepackage{pgfplots} % Include this package for plotting
+\usepackage{tabularx}
+\usepackage{listings}               % For code listing
+\usepackage{xcolor}                 % For color options
+\pgfplotsset{compat=newest} % Set compatibility version
+
+\allowdisplaybreaks
+
+% Page size and margins
+\geometry{a4paper, margin=1in}
+
+% Header and footer style
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+% Disable indentation of paragraphs
+\setlength{\parindent}{0pt}
+
+% Equation numbering
+\numberwithin{equation}{chapter}
+
+% Page size and margins
+\geometry{a4paper, margin=1in}
+
+% Header and footer style
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+% Disable indentation of paragraphs
+\setlength{\parindent}{0pt}
+
+% Equation numbering
+\numberwithin{equation}{chapter}
+
+% Theorem Environments
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+
+% Exercise Environments
+\newtheorem{exercise}{Exercise}[chapter]
+\newtheorem{solution}{Solution}[chapter]
+
+% Example Environment
+\newtheorem{example}{Example}[chapter]
+
+% TikZ settings
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, calc, matrix}
+
+% Define R language settings for listings
+\lstdefinestyle{Rstyle}{
+    language=R,                     % Set language to R
+    backgroundcolor=\color{white},  % Set background color
+    basicstyle=\ttfamily\small,     % Font type and size
+    keywordstyle=\color{blue},       % Keyword color
+    commentstyle=\color{gray},      % Comment color
+    stringstyle=\color{red},         % String color
+    numbers=left,                    % Position of line numbers
+    numberstyle=\tiny\color{gray},   % Style for line numbers
+    stepnumber=1,                    % Step between line numbers
+    numbersep=10pt,                  % Distance of numbers from code
+    showspaces=false,                % Don't show spaces
+    showstringspaces=false,          % Don't show spaces in strings
+    showtabs=false,                  % Don't show tabs
+    tabsize=2                        % Size of tabs
+}
+
+% Custom commands
+\input{macros}
